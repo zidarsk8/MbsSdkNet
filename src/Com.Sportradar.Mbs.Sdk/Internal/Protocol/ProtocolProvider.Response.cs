@@ -167,7 +167,7 @@ internal partial class ProtocolProvider
 
         public bool CheckResponseType(ContentResponseBase contentResponseBase)
         {
-            return contentResponseBase.GetType().IsSubclassOf(_contentResponseType);
+			return _contentResponseType.IsInstanceOfType(contentResponseBase);
         }
 
         public T GetResult<T>() where T : ContentResponseBase

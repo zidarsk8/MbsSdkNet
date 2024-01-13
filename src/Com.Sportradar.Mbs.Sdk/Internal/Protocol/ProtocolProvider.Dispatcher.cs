@@ -112,13 +112,13 @@ internal partial class ProtocolProvider
             {
                 var sdkException = new ServerErrorResponseException(
                     error.ErrorCode, error.ErrorMessage ?? "Unknown error");
-                if (ResponseReceived(message.CorrelationId, sdkException)) return;
+                if (ResponseReceived(response.CorrelationId, sdkException)) return;
             }
 
             var invalidResponseException =
                 new ProtocolInvalidResponseException("Invalid response: " + message.Content);
 
-            if (ResponseReceived(message.CorrelationId, invalidResponseException)) return;
+            if (ResponseReceived(response.CorrelationId, invalidResponseException)) return;
 
             HandleException(invalidResponseException);
         }

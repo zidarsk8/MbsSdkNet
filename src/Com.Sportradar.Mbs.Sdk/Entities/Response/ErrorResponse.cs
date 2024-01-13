@@ -8,9 +8,9 @@ public class ErrorResponse : ContentResponseBase
     [JsonPropertyName("type")]
     private string Type => "error-reply";
 
-    [JsonPropertyName("errorMessage")]
+    [JsonPropertyName("message")]
     public string? ErrorMessage { get; set; }
 
-    [JsonPropertyName("errorCode")]
+    [JsonPropertyName("code")]
     public int ErrorCode { get; set; }
 }

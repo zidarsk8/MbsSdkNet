@@ -40,4 +40,5 @@ public class MbsSdkConfig
     public TimeSpan? WsConsumerGraceTimeout { get; set; }
     public TimeSpan? WsRefreshConnectionTimeout { get; set; }
     public int? WsNumberOfConnections { get; set; }
+    public Action<MbsSdk, Exception>? UnhandledExceptionHandler { get; set; }
 }

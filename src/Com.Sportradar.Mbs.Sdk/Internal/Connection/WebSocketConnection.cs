@@ -74,7 +74,7 @@ internal class WebSocketConnection : IDisposable
                 throw;
             }
 
-            Volatile.Write(ref _connectedVersion, version);
+            Volatile.Write(ref _connectedVersion, nextVersion);
             StartProcessing(webSocket, nextVersion);
         }
         catch
@@ -231,7 +231,7 @@ internal class WebSocketConnection : IDisposable
     private async Task<(WebSocketReceiveResult, byte[])> ResponseChunkReceiveAsync(ClientWebSocket webSocket)
     {
         using var source = new CancellationTokenSource(_config.WsReceiveMessageTimeout);
-        var buffer = new ArraySegment<byte>();
+        var buffer = new ArraySegment<byte>(new byte[16384]);
         var result = await webSocket.ReceiveAsync(buffer, source.Token).ConfigureAwait(false);
         if (result.MessageType == WebSocketMessageType.Close)
             await CloseSocketAsync(webSocket, result);

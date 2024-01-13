@@ -52,7 +52,7 @@ internal class TokenProvider : IDisposable
             {
                 Exception? possibleExc = null;
                 string? token = null;
-                for (var i = 0; i < 10 && token != null; i++)
+                for (var i = 0; i < 10 && token == null; i++)
                     try
                     {
                         token = GetToken() ?? await FetchTokenAsync(cancellationToken).ConfigureAwait(false);
