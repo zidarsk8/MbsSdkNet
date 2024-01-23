@@ -6,6 +6,21 @@
         <TargetFrameworks>net6.0;net7.0;net8.0;netstandard2.0</TargetFrameworks>
         <LangVersion>11</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+        <Version>0.9.0</Version>
+        <AssemblyVersion>0.9.0</AssemblyVersion>
+        <FileVersion>0.9.0</FileVersion>
+        <PackageId>Com.Sportradar.Mbs.Sdk</PackageId>
+        <Authors>Sportradar AG</Authors>
+        <Company>Sportradar AG</Company>
+        <Product>Sportradar.Mbs.Sdk</Product>
+        <Description>The SDK simplifying the integration with Sportradar's MBS services</Description>
+        <Copyright>Copyright © Sportradar AG 2024</Copyright>
+        <PackageProjectUrl>http://sdk.sportradar.com</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/sportradar/MbsSdkNet</RepositoryUrl>
+        <PackageTags>SportRadar Mbs Sdk .Net</PackageTags>
+        <PackageReleaseNotes>Initial version</PackageReleaseNotes>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>
