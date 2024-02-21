@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Channel;
 
+/// <summary>
+/// Represents the base class for channels.
+/// </summary>
 [JsonConverter(typeof(ChannelBaseJsonConverter))]
 public abstract class ChannelBase
 {

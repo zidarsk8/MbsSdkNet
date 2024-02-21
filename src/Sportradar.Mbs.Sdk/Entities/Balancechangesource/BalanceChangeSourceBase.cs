@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Balancechangesource;
 
+/// <summary>
+/// Represents the base class for balance change sources.
+/// </summary>
 [JsonConverter(typeof(BalanceChangeSourceBaseJsonConverter))]
 public abstract class BalanceChangeSourceBase
 {

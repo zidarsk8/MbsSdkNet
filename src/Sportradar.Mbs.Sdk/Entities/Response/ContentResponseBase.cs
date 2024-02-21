@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Response;
 
+/// <summary>
+/// Represents the base class for content responses.
+/// </summary>
 [JsonConverter(typeof(ContentResponseBaseJsonConverter))]
 public abstract class ContentResponseBase
 {

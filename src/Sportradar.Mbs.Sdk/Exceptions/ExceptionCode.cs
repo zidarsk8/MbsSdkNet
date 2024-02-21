@@ -1,5 +1,8 @@
 namespace Sportradar.Mbs.Sdk.Exceptions;
 
+/// <summary>
+/// Represents the exception codes used in the application.
+/// </summary>
 public static class ExceptionCode
 {
     public const int AuthTokenFailure = 1;

@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Stake;
 
+/// <summary>
+/// Represents the base class for stake entities.
+/// </summary>
 [JsonConverter(typeof(StakeBaseJsonConverter))]
 public abstract class StakeBase
 {

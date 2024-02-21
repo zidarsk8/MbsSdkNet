@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Payout;
 
+/// <summary>
+/// Represents the base class for payout entities.
+/// </summary>
 [JsonConverter(typeof(PayoutBaseJsonConverter))]
 public abstract class PayoutBase
 {

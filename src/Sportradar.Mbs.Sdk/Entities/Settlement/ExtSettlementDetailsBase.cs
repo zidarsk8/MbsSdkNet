@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Settlement;
 
+/// <summary>
+/// Represents the base class for external settlement details.
+/// </summary>
 [JsonConverter(typeof(ExtSettlementDetailsBaseJsonConverter))]
 public abstract class ExtSettlementDetailsBase
 {

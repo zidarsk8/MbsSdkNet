@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Ref;
 
+/// <summary>
+/// Represents the base class for ticket references.
+/// </summary>
 [JsonConverter(typeof(TicketRefBaseJsonConverter))]
 public abstract class TicketRefBase
 {

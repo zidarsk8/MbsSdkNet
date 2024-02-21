@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Odds;
 
+/// <summary>
+/// Represents the base class for odds entities.
+/// </summary>
 [JsonConverter(typeof(OddsBaseJsonConverter))]
 public abstract class OddsBase
 {

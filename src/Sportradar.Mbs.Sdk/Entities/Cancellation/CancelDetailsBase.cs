@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Cancellation;
 
+/// <summary>
+/// Represents the base class for cancellation details.
+/// </summary>
 [JsonConverter(typeof(CancelDetailsBaseJsonConverter))]
 public abstract class CancelDetailsBase
 {

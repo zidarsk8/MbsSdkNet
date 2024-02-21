@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Selection;
 
+/// <summary>
+/// Represents the base class for selections.
+/// </summary>
 [JsonConverter(typeof(SelectionBaseJsonConverter))]
 public abstract class SelectionBase
 {

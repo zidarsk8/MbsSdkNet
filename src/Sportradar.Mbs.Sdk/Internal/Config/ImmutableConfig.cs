@@ -35,7 +35,7 @@ internal class ImmutableConfig :
         WsConsumerGraceTimeout =
             (parent.WsConsumerGraceTimeout ?? TimeSpan.FromMinutes(1)).AtLeast(MinTimeSpan);
         WsRefreshConnectionTimeout =
-            (parent.WsRefreshConnectionTimeout ?? TimeSpan.FromMinutes(40)).AtLeast(MinTimeSpan);
+            (parent.WsRefreshConnectionTimeout ?? TimeSpan.FromMinutes(100)).AtLeast(MinTimeSpan);
         ProtocolRetryCount =
             (parent.ProtocolRetryCount ?? 0).AtLeast(0);
         ProtocolMaxSendBufferSize =

@@ -4,6 +4,9 @@ using Sportradar.Mbs.Sdk.Protocol;
 
 namespace Sportradar.Mbs.Sdk;
 
+/// <summary>
+/// Represents the main class for interacting with the MBS service.
+/// </summary>
 public class MbsSdk : IDisposable
 {
     private readonly object _lock;
@@ -13,6 +16,10 @@ public class MbsSdk : IDisposable
     private bool _connected;
     private bool _disposed;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MbsSdk"/> class.
+    /// </summary>
+    /// <param name="config">The configuration for the SDK.</param>
     public MbsSdk(MbsSdkConfig config)
     {
         _unhandledExceptionHandler = config.UnhandledExceptionHandler;
@@ -21,8 +28,14 @@ public class MbsSdk : IDisposable
         _lock = new object();
     }
 
+    /// <summary>
+    /// Gets the ticket protocol.
+    /// </summary>
     public ITicketProtocol TicketProtocol => _protocolProvider.TicketProtocol;
 
+    /// <summary>
+    /// Disposes the SDK and releases all resources.
+    /// </summary>
     public void Dispose()
     {
         lock (_lock)
@@ -34,6 +47,9 @@ public class MbsSdk : IDisposable
         }
     }
 
+    /// <summary>
+    /// Connects to the MBS service.
+    /// </summary>
     public void Connect()
     {
         lock (_lock)
@@ -45,6 +61,9 @@ public class MbsSdk : IDisposable
         }
     }
 
+    /// <summary>
+    /// Handles unhandled exceptions from the protocol provider.
+    /// </summary>
     private void ProtocolProviderOnUnhandledException(object sender, UnhandledExceptionEventArgs e)
     {
         try

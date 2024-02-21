@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Suggestion;
 
+/// <summary>
+/// Represents the base class for suggestions.
+/// </summary>
 [JsonConverter(typeof(SuggestionBaseJsonConverter))]
 public abstract class SuggestionBase
 {

@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Casinospin;
 
+/// <summary>
+/// Represents the base class for a casino spin.
+/// </summary>
 [JsonConverter(typeof(CasinoSpinBaseJsonConverter))]
 public abstract class CasinoSpinBase
 {

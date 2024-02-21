@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Sportradar.Mbs.Sdk.Entities.Cashout;
 
+/// <summary>
+/// Represents the base class for cashout details.
+/// </summary>
 [JsonConverter(typeof(CashoutDetailsBaseJsonConverter))]
 public abstract class CashoutDetailsBase
 {
